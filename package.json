@@ -1,0 +1,20 @@
+{
+  "name": "ethereum_tutorials",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Evan Botello",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "babel . --no-comments --ignore node_modules --out-dir build && node build/deploy.js && rm -rf build",
+    "deployGreeterContract": "CONTRACT_PATH=contract_greeter yarn deploy",
+    "deployCoinContract": "CONTRACT_PATH=contract_coin yarn deploy",
+    "deployCrowdfundContract": "CONTRACT_PATH=contract_crowdfund yarn deploy"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bluebird": "3.5.1",
+    "solc": "0.4.21",
+    "web3": "0.20.6"
+  }
+}
